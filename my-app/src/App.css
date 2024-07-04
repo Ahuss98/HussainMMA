@@ -16,7 +16,7 @@ p{
   color:rgb(6, 6, 6);
 }
 h1 {
-  font-size: x-large;
+  font-size: 5rem;
   color: rgb(230, 40, 227);
   margin: 0; /* Remove default margin */
   padding: 0.5rem; /* Add padding if needed */
@@ -68,6 +68,76 @@ h1 {
     padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
     margin: 0.25rem;
   }
+}
+/* Nav.css */
+
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hamburger-icon .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger-icon.open .bar:nth-child(1) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .bar:nth-child(2) {
+ 
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: max-height 0.3s, opacity 0.3s;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.menu-links.open {
+  max-height: 200px; /* Adjust as necessary */
+  opacity: 1;
+}
+
+.menu-links.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.menu-links a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-links a.active {
+  font-weight: bold;
+  color: blue;
 }
 
 
