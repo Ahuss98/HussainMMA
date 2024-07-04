@@ -8,11 +8,8 @@ function Monday() {
   const [exerciseData2, setExerciseData2] = useState(null);
   const [shuffledExercises1, setShuffledExercises1] = useState([]);
   const [shuffledExercises2, setShuffledExercises2] = useState([]);
-  const [isTextVisable,setIsTextVisable] = useState(false)
-
-  function invisaClick(){
-    setIsTextVisable(!isTextVisable)
-  }
+  const [visibleTextId, setVisibleTextId] = useState(null);
+  const [visibleTextId2, setVisibleTextId2] = useState(null);
 
   useEffect(() => {
     if (selectedExercise1) {
@@ -35,7 +32,7 @@ function Monday() {
   }
 
   function fetchExercise1(muscle) {
-    const apiKey = API_KEY ; // Replace with your actual API key
+    const apiKey = API_KEY; // Replace with your actual API key
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
@@ -53,7 +50,7 @@ function Monday() {
   }
 
   function fetchExercise2(muscle) {
-    const apiKey = API_KEY ; // Replace with your actual API key
+    const apiKey = API_KEY; // Replace with your actual API key
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
@@ -79,6 +76,13 @@ function Monday() {
     return shuffledArr.slice(0, numElements);
   }
 
+  function handleButtonClick(id) {
+    setVisibleTextId(visibleTextId === id ? null : id);
+  }
+  function handleButtonClick2(id) {
+    setVisibleTextId2(visibleTextId2 === id ? null : id);
+  }
+  
   return (
     <>
       <h3>Monday Workout</h3>
@@ -99,7 +103,16 @@ function Monday() {
           <h2>Muscle Group 1</h2>
           <ul>
             {shuffledExercises1.map((exercise, index) => (
-              <li key={index}>{exercise.name}</li>
+              <li key={index}>
+              <button onClick={() => handleButtonClick2(index)} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
+                {exercise.name}
+              </button>
+              {visibleTextId2 === index && (
+                <p>
+                  {exercise.instructions}
+                </p>
+              )}
+            </li>
             ))}
           </ul>
         </div>
@@ -109,8 +122,16 @@ function Monday() {
           <h2>Muscle Group 2</h2>
           <ul>
             {shuffledExercises2.map((exercise, index) => (
-              <li key={index}>{exercise.name}</li>
-              
+              <li key={index}>
+                <button onClick={() => handleButtonClick(index)} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
+                  {exercise.name}
+                </button>
+                {visibleTextId === index && (
+                  <p>
+                    {exercise.instructions}
+                  </p>
+                )}
+              </li>
             ))}
           </ul>
         </div>
@@ -120,4 +141,5 @@ function Monday() {
 }
 
 export default Monday;
+
 
