@@ -1,21 +1,73 @@
+/*Genral*/
+* {
+  margin: 5px;
+  padding: 2px;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    background-color: rgb(255, 255, 255);
+}
+html{
+  scroll-behavior: smooth;
+}
+p{
+  color:rgb(6, 6, 6);
+}
 h1 {
   font-size: x-large;
-  color: blue;
+  color: rgb(230, 40, 227);
+  margin: 0; /* Remove default margin */
+  padding: 0.5rem; /* Add padding if needed */
+}
+.Header{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.week-button-container {
+  outline: black 2px solid;
+  max-width: 73%; /* Ensure it doesn't exceed the viewport width */
+  display: flex;
+  margin:5%;
+  flex-wrap: wrap; /* Allow wrapping to new lines if needed */
+  justify-content: center; /* Center items horizontally */
+  justify-items: center;
+  padding: 1rem; /* Add padding if needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .button {
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  padding: 0.5rem 1rem; /* Adjust padding for better fit */
+  margin: 0.5rem; /* Add margin between buttons */
 }
 
 .on {
-  background-color: green;
+  outline: black 2px solid;
+  background-color: rgb(230, 40, 227);
 }
 
 .off {
-  background-color: red;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: large;
+  }
+
+  .button {
+    padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
+    margin: 0.25rem;
+  }
+}
+
 

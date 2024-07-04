@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Monday from "./Monday";
 
-function TodoForm() {
+function WorkoutPlanner() {
   const [newExercise, setNewExercise] = useState('');
   const [exerciseData, setExerciseData] = useState(null); // To store the fetched exercise data
   const [isMondayOn,setIsMondayOn] = useState(false)
   const [isTuesdayOn,setIsTuesdayOn] = useState(false)
   const [isWednesdayOn,setIsWednesdayOn] = useState(false)
   const [isThursdayOn,setIsThursdayOn] = useState(false)
+  const [isFridayOn,setIsFridayOn] = useState(false)
+  const [isSaturdayOn,setIsSaturdayOn] = useState(false)
+  const [isSundayOn,setIsSundayOn] = useState(false)
 
   function handleMondayToggle () {
     setIsMondayOn(prevState => !prevState)
@@ -20,6 +23,15 @@ function TodoForm() {
   }
   function handleThursdayToggle () {
     setIsThursdayOn(prevState => !prevState)
+  }
+  function handleFridayToggle () {
+    setIsFridayOn(prevState => !prevState)
+  }
+  function handleSaturdayToggle () {
+    setIsSaturdayOn(prevState => !prevState)
+  }
+  function handleSundayToggle () {
+    setIsSundayOn(prevState => !prevState)
   }
 
   function handleSubmit(event) {
@@ -67,6 +79,7 @@ function TodoForm() {
         </div>
       )}
     </form>
+    <div className="week-button-container">
     <button onClick={handleMondayToggle} className={`button ${ isMondayOn ? 'on' : 'off'}`}>
         Monday
     </button>
@@ -79,15 +92,21 @@ function TodoForm() {
     <button onClick={handleThursdayToggle} className={`button ${ isThursdayOn ? 'on' : 'off'}`}>
         Thursday
     </button>
-
+    <button onClick={handleFridayToggle} className={`button ${isFridayOn ? 'on' : 'off'}`}>
+        Friday
+    </button>
+    <button onClick={handleSaturdayToggle} className={`button ${ isSaturdayOn ? 'on' : 'off'}`}>
+        Saturday
+    </button>
+    <button onClick={handleSundayToggle} className={`button ${ isSundayOn ? 'on' : 'off'}`}>
+        Sunday
+    </button>
+    </div>
     <>
       {isMondayOn ? <Monday/> : null}
     </>
     {
-    /*<button onClick={handleToggle} className={`button ${ isOn ? 'on' : 'off'}`}>
-    <button onClick={handleToggle} className={`button ${ isOn ? 'on' : 'off'}`}>
-        {isOn ? 'FRIDAY' : 'friday'}
-    </button>
+    /*
     <button onClick={handleToggle} className={`button ${ isOn ? 'on' : 'off'}`}>
         {isOn ? 'SATURDAY' : 'saturday'}
     </button>
@@ -99,4 +118,4 @@ function TodoForm() {
   );
 }
 
-export default TodoForm;
+export default WorkoutPlanner;
