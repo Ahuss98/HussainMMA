@@ -59,26 +59,6 @@ function WorkoutPlanner() {
 
   return (
     <>
-    <form className="TodoForm" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="Todo-input"
-        placeholder="What is the exercise?"
-        value={newExercise}
-        onChange={(e) => setNewExercise(e.target.value)}
-      />
-      <button type="submit">Fetch Exercise</button>
-      {exerciseData && (
-        <div className="exercise-results">
-          <h2>Exercise Results:</h2>
-          <ul>
-            {exerciseData.map((exercise, index) => (
-              <li key={index}>{exercise.name} : {exercise.difficulty} : {exercise.type}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </form>
     <div className="week-button-container">
     <button onClick={handleMondayToggle} className={`button ${ isMondayOn ? 'on' : 'off'}`}>
         Monday

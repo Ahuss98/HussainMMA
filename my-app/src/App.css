@@ -137,7 +137,43 @@ nav {
 
 .menu-links a.active {
   font-weight: bold;
-  color: blue;
+  color: rgb(230, 40, 227);
 }
 
+li{
+  list-style-type:none;
+  color: rgb(230, 40, 227);
+}
+.exercise-button {
+  font-weight: bold;
+  background:none;
+  border: none;
+  cursor: pointer;
+  color: rgb(230, 40, 227); /* Change to your desired color */
+  text-decoration: none; /* Remove underline if desired */
+}
 
+.exercise-button:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 0); /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover if desired */
+}
+.workout-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.exercise-results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: black 2px solid;
+}
+.exercise-button{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
