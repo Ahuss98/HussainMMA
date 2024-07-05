@@ -104,7 +104,7 @@ function Monday() {
           <ul>
             {shuffledExercises1.map((exercise, index) => (
               <li key={index}>
-              <button onClick={() => handleButtonClick2(index)} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
+              <button onClick={() => handleButtonClick2(index)} className="exercise-button" >
                 {exercise.name}
               </button>
               {visibleTextId2 === index && (
@@ -123,7 +123,7 @@ function Monday() {
           <ul>
             {shuffledExercises2.map((exercise, index) => (
               <li key={index}>
-                <button onClick={() => handleButtonClick(index)} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
+                <button onClick={() => handleButtonClick(index)} className="exercise-button" >
                   {exercise.name}
                 </button>
                 {visibleTextId === index && (

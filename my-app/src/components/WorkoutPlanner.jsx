@@ -2,8 +2,6 @@ import { useState } from "react";
 import Monday from "./Monday";
 
 function WorkoutPlanner() {
-  const [newExercise, setNewExercise] = useState('');
-  const [exerciseData, setExerciseData] = useState(null); // To store the fetched exercise data
   const [isMondayOn,setIsMondayOn] = useState(false)
   const [isTuesdayOn,setIsTuesdayOn] = useState(false)
   const [isWednesdayOn,setIsWednesdayOn] = useState(false)
@@ -32,29 +30,6 @@ function WorkoutPlanner() {
   }
   function handleSundayToggle () {
     setIsSundayOn(prevState => !prevState)
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    fetchExercise();
-  }
-
-  function fetchExercise() {
-    const apiKey = 'CewTPFS76SgtxPx22QHKpg==tu5xpSk8ZmNeUMfK'; // Replace with your actual API key
-    const url = `https://api.api-ninjas.com/v1/exercises?muscle=${newExercise}`;
-
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'X-Api-Key': apiKey
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      setExerciseData(data);
-    })
-    .catch(error => console.error('Error:', error));
   }
 
   return (
