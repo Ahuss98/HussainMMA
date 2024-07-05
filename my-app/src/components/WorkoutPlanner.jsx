@@ -40,7 +40,7 @@ function WorkoutPlanner() {
 
   return (
     <div className="worout-page-container">
-    <p className="weekdays-description">1. First things first, select the days in the week you would like to workout: </p>
+    <p className="weekdays-description">1. First things first, select the days in the week you would like to work out: </p>
     <div className="week-button-container">
     <button onClick={handleMondayToggle} className={`button ${ isMondayOn ? 'on' : 'off'}`}>
         Monday
@@ -64,10 +64,11 @@ function WorkoutPlanner() {
         Sunday
     </button>
     </div>
-    <p className="weekdays-description">2. Now select 2 differnt muscle groups you would like to workout for each day:</p>
-    <p className="weekdays-description">Feel free to mix it up, if your just starting out,</p>
+    <p className="weekdays-description">2. Now select 2 different muscle groups you would like to work out for each day:</p>
+    <p className="weekdays-description">Feel free to mix it up if you're just starting out, 
+</p>
     <p className="weekdays-description">but try to make consecutive workouts different.</p>
-    <p className="weekdays-tip">Cheeky tip! if you want to know more about a workout just click on it!</p>
+    <p className="weekdays-tip">Cheeky tip! If you want to know more about a workout, just click on it!</p>
     <div className="workout-container">
       {isMondayOn ? <Monday/> : <p className="restday">Monday : REST DAY!</p>}
       {isTuesdayOn ? <Tuesday/> : <p className="restday">Tuesday : REST DAY!</p>}
@@ -77,8 +78,8 @@ function WorkoutPlanner() {
       {isSaturdayOn ? <Saturday/> : <p className="restday">Saturday : REST DAY!</p>}
       {isSundayOn ? <Sunday/> : <p className="restday">Sunday : REST DAY!</p>}
     </div>
-    <p className="weekdays-description">3. Now go and crush it, dont worry if you dont do everything, </p>
-    <p className="weekdays-description">just come back at the end of the week and go again.</p>
+    <p className="weekdays-description">3. Now go and crush it. Don’t worry if you don’t do everything; </p>
+    <p className="weekdays-description"> just come back at the end of the week and go again. </p>
     <p className="weekdays-description">The key is to get started and eventually get consistent!</p>
     </div>
     

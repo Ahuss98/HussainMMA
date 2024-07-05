@@ -129,7 +129,7 @@ function Tuesday() {
             {shuffledExercises1.map((exercise, index) => (
               <li key={index}>
               <button onClick={() => handleButtonClick2(index)} className="exercise-button" >
-                {exercise.name}
+                {exercise.name} || 3x10-12
               </button>
               {visibleTextId2 === index && (
                 <p>
@@ -148,7 +148,7 @@ function Tuesday() {
             {shuffledExercises2.map((exercise, index) => (
               <li key={index}>
                 <button onClick={() => handleButtonClick(index)} className="exercise-button" >
-                  {exercise.name}
+                  {exercise.name} || 3x10-12
                 </button>
                 {visibleTextId === index && (
                   <p>

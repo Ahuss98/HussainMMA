@@ -20,7 +20,7 @@ function HomePage(){
   
   
     function fetchExercise1(muscle) {
-      const apiKey = API_KEY; // Replace with your actual API key
+      const apiKey = API_KEY;
       const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
   
       fetch(url, {
@@ -54,12 +54,12 @@ function HomePage(){
     return (
         <>
         <div className="homepage-description">
-        <p>Here at HussainFitness we focus on improving lifes, changionf your life starts with the first step. and we are here to help you. alot of the time the first step can be the hardest and at HussainFitness we equip you with the rescources to make that first step easier.</p>
+        <p>Here at HussainFitness, we focus on improving lives. Changing your life starts with the first step, and we are here to help you. A lot of the time, the first step can be the hardest, and at HussainFitness, we equip you with the resources to make that first step easier. </p>
         <p>
-            We have developed a system here at HussainFitenss that allows you to create a weekley workout ruitine with ease. all you have to do is select the days you would like to worout and the exercises you would like to do on that selected day which we display for you. we make it that easy for you. so you can take that all so important first step.
+        We have developed a system here at HussainFitness that allows you to create a weekly workout routine with ease. All you have to do is select the days you would like to work out and the exercises you would like to do on those selected days, which we display for you. We make it that easy for you so you can take that all-important first step.
         </p>
         <p className="homepage-bottom-desc">
-            If you dont feel like making a weekly plan and only want to make a workout for today, or would like to play around with this workout maker:
+        If you don’t feel like making a weekly plan and only want to make a workout for today, or would like to play around with this workout maker:
         </p>
         </div>
         <div className="workout-container">

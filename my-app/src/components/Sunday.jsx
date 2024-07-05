@@ -32,7 +32,7 @@ function Sunday() {
   }
 
   function fetchExercise1(muscle) {
-    const apiKey = API_KEY; // Replace with your actual API key
+    const apiKey = API_KEY;
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
@@ -50,7 +50,7 @@ function Sunday() {
   }
 
   function fetchExercise2(muscle) {
-    const apiKey = API_KEY; // Replace with your actual API key
+    const apiKey = API_KEY;
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
@@ -129,7 +129,7 @@ function Sunday() {
             {shuffledExercises1.map((exercise, index) => (
               <li key={index}>
               <button onClick={() => handleButtonClick2(index)} className="exercise-button" >
-                {exercise.name}
+                {exercise.name} || 3x10-12
               </button>
               {visibleTextId2 === index && (
                 <p>
@@ -148,7 +148,7 @@ function Sunday() {
             {shuffledExercises2.map((exercise, index) => (
               <li key={index}>
                 <button onClick={() => handleButtonClick(index)} className="exercise-button" >
-                  {exercise.name}
+                  {exercise.name} || 3x10-12
                 </button>
                 {visibleTextId === index && (
                   <p>
