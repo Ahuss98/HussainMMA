@@ -58,8 +58,8 @@ function HomePage(){
         <p>
             We have developed a system here at HussainFitenss that allows you to create a weekley workout ruitine with ease. all you have to do is select the days you would like to worout and the exercises you would like to do on that selected day which we display for you. we make it that easy for you. so you can take that all so important first step.
         </p>
-        <p>
-            If you dont feel like making a weekly plan and only want to make a workout for today, or would like to play around with this workout maker
+        <p className="homepage-bottom-desc">
+            If you dont feel like making a weekly plan and only want to make a workout for today, or would like to play around with this workout maker:
         </p>
         </div>
         <div className="workout-container">
