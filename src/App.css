@@ -71,7 +71,6 @@ h1 {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    outline: black 2px solid;
   }
   
   .top-tip-tip {
