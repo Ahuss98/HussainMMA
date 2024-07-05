@@ -5,6 +5,7 @@ import Nav from './components/nav'
 import Contact from './components/Contact';
 import NotFoundPage from './components/NotFoundPage';
 import HomePage from './components/HomePage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,10 +18,8 @@ function App() {
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <Footer/>
       </div>
-      <div className="footer">
-				<p>&copy; 2024 HussainFitness. All rights reserved.</p>
-			</div>
     </Router>
   )
 }

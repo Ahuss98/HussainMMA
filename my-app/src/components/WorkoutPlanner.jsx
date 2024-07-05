@@ -39,7 +39,7 @@ function WorkoutPlanner() {
   }
 
   return (
-    <>
+    <div className="worout-page-container">
     <p className="weekdays-description">1. First things first, select the days in the week you would like to workout: </p>
     <div className="week-button-container">
     <button onClick={handleMondayToggle} className={`button ${ isMondayOn ? 'on' : 'off'}`}>
@@ -80,7 +80,7 @@ function WorkoutPlanner() {
     <p className="weekdays-description">3. Now go and crush it, dont worry if you dont do everything, </p>
     <p className="weekdays-description">just come back at the end of the week and go again.</p>
     <p className="weekdays-description">The key is to get started and eventually get consistent!</p>
-    </>
+    </div>
     
   );
 }
