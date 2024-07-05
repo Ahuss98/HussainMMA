@@ -18,8 +18,8 @@ p{
 h1 {
   font-size: 5rem;
   color: rgb(230, 40, 227);
-  margin: 0; /* Remove default margin */
-  padding: 0.5rem; /* Add padding if needed */
+  margin: 0; 
+  padding: 0.5rem; 
 }
 .Header{
   display: flex;
@@ -28,13 +28,13 @@ h1 {
 }
 
 .week-button-container {
-  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  max-width: 100%; 
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to new lines if needed */
-  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; 
+  justify-content: center;
   justify-items: center;
-  padding: 1rem; /* Add padding if needed */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 1rem; 
+  box-sizing: border-box; 
   
 }
 
@@ -43,8 +43,8 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0.5rem 1rem; /* Adjust padding for better fit */
-  margin: 0.5rem; /* Add margin between buttons */
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
 }
 
 .on {
@@ -64,9 +64,28 @@ h1 {
   }
 
   .button {
-    padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
+    padding: 0.25rem 0.5rem; 
     margin: 0.25rem;
   }
+  .top-tip-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    outline: black 2px solid;
+  }
+  
+  .top-tip-tip {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .top-tip-tip img {
+    max-width: 100px;
+    height: auto;
+  }
+
 }
 /* Nav.css */
 
@@ -119,7 +138,7 @@ nav {
 }
 
 .menu-links.open {
-  max-height: 200px; /* Adjust as necessary */
+  max-height: 200px; 
   opacity: 1;
 }
 
@@ -148,14 +167,14 @@ li{
   background:none;
   border: none;
   cursor: pointer;
-  color: rgb(0, 0, 0); /* Change to your desired color */
-  text-decoration: none; /* Remove underline if desired */
+  color: rgb(0, 0, 0); 
+  text-decoration: none; 
 }
 
 .exercise-button:hover {
   text-decoration: underline;
-  color: rgb(230, 40, 227); /* Change color on hover */
-  text-decoration: underline; /* Add underline on hover if desired */
+  color: rgb(230, 40, 227); 
+  text-decoration: underline;
 }
 .workout-container{
   display: flex;
