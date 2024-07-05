@@ -32,7 +32,7 @@ function Thursday() {
   }
 
   function fetchExercise1(muscle) {
-    const apiKey = API_KEY; // Replace with your actual API key
+    const apiKey = API_KEY; 
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
@@ -50,7 +50,7 @@ function Thursday() {
   }
 
   function fetchExercise2(muscle) {
-    const apiKey = API_KEY; // Replace with your actual API key
+    const apiKey = API_KEY; 
     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
     fetch(url, {
