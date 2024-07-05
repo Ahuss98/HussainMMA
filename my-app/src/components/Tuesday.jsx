@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_KEY } from "/secret.js"; 
 
-function Monday() {
+function Tuesday() {
   const [selectedExercise1, setSelectedExercise1] = useState('');
   const [selectedExercise2, setSelectedExercise2] = useState('');
   const [exerciseData1, setExerciseData1] = useState(null);
@@ -84,8 +84,8 @@ function Monday() {
   }
   
   return (
-    <div className="workout-container">
-      <h3>Monday Workout</h3>
+    <>
+      <h3>Tuesday Workout</h3>
       <select name="dropdown1" id="dropdown1" onChange={handleChange1}>
       <option value="">Select a muscle</option>
         <option value="biceps">Biceps</option>
@@ -160,10 +160,8 @@ function Monday() {
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
-export default Monday;
-
-
+export default Tuesday;

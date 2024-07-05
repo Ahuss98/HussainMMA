@@ -1,5 +1,11 @@
 import { useState } from "react";
 import Monday from "./Monday";
+import Tuesday from "./Tuesday";
+import Thursday from "./Thursday";
+import Wednesday from "./Wednesday";
+import Friday from "./Friday";
+import Saturday from "./Saturday";
+import Sunday from "./Sunday";
 
 function WorkoutPlanner() {
   const [isMondayOn,setIsMondayOn] = useState(false)
@@ -34,6 +40,7 @@ function WorkoutPlanner() {
 
   return (
     <>
+    <p className="weekdays-description">1. First things first, select the days in the week you would like to workout: </p>
     <div className="week-button-container">
     <button onClick={handleMondayToggle} className={`button ${ isMondayOn ? 'on' : 'off'}`}>
         Monday
@@ -57,17 +64,22 @@ function WorkoutPlanner() {
         Sunday
     </button>
     </div>
-    <>
-      {isMondayOn ? <Monday/> : null}
-    </>
-    {
-    /*
-    <button onClick={handleToggle} className={`button ${ isOn ? 'on' : 'off'}`}>
-        {isOn ? 'SATURDAY' : 'saturday'}
-    </button>
-    <button onClick={handleToggle} className={`button ${ isOn ? 'on' : 'off'}`}>
-        {isOn ? 'SUNDAY' : 'sunday'}
-    </button> */}
+    <p className="weekdays-description">2. Now select 2 differnt muscle groups you would like to workout for each day:</p>
+    <p className="weekdays-description">Feel free to mix it up, if your just starting out,</p>
+    <p className="weekdays-description">but try to make consecutive workouts different.</p>
+    <p className="weekdays-tip">Cheeky tip! if you want to know more about a workout just click on it!</p>
+    <div className="workout-container">
+      {isMondayOn ? <Monday/> : <p className="restday">Monday : REST DAY!</p>}
+      {isTuesdayOn ? <Tuesday/> : <p className="restday">Tuesday : REST DAY!</p>}
+      {isWednesdayOn ? <Wednesday/> : <p className="restday">Wednesday : REST DAY!</p>}
+      {isThursdayOn ? <Thursday/> : <p className="restday">Thursday : REST DAY!</p>}
+      {isFridayOn ? <Friday/> : <p className="restday">Friday : REST DAY!</p>}
+      {isSaturdayOn ? <Saturday/> : <p className="restday">Saturday : REST DAY!</p>}
+      {isSundayOn ? <Sunday/> : <p className="restday">Sunday : REST DAY!</p>}
+    </div>
+    <p className="weekdays-description">3. Now go and crush it, dont worry if you dont do everything, </p>
+    <p className="weekdays-description">just come back at the end of the week and go again.</p>
+    <p className="weekdays-description">The key is to get started and eventually get consistent!</p>
     </>
     
   );

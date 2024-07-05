@@ -53,6 +53,7 @@ function HomePage(){
     
     return (
         <>
+        <div className="homepage-description">
         <p>Here at HussainFitness we focus on improving lifes, changionf your life starts with the first step. and we are here to help you. alot of the time the first step can be the hardest and at HussainFitness we equip you with the rescources to make that first step easier.</p>
         <p>
             We have developed a system here at HussainFitenss that allows you to create a weekley workout ruitine with ease. all you have to do is select the days you would like to worout and the exercises you would like to do on that selected day which we display for you. we make it that easy for you. so you can take that all so important first step.
@@ -60,6 +61,7 @@ function HomePage(){
         <p>
             If you dont feel like making a weekly plan and only want to make a workout for today, or would like to play around with this workout maker
         </p>
+        </div>
         <div className="workout-container">
         <h3>Your Workout</h3>
       <select name="dropdown1" id="dropdown1" onChange={handleChange1}>

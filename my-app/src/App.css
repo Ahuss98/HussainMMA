@@ -28,15 +28,14 @@ h1 {
 }
 
 .week-button-container {
-  outline: black 2px solid;
-  max-width: 73%; /* Ensure it doesn't exceed the viewport width */
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
   display: flex;
-  margin:5%;
   flex-wrap: wrap; /* Allow wrapping to new lines if needed */
   justify-content: center; /* Center items horizontally */
   justify-items: center;
   padding: 1rem; /* Add padding if needed */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  
 }
 
 .button {
@@ -149,13 +148,13 @@ li{
   background:none;
   border: none;
   cursor: pointer;
-  color: rgb(230, 40, 227); /* Change to your desired color */
+  color: rgb(0, 0, 0); /* Change to your desired color */
   text-decoration: none; /* Remove underline if desired */
 }
 
 .exercise-button:hover {
   text-decoration: underline;
-  color: rgb(0, 0, 0); /* Change color on hover */
+  color: rgb(230, 40, 227); /* Change color on hover */
   text-decoration: underline; /* Add underline on hover if desired */
 }
 .workout-container{
@@ -169,11 +168,36 @@ li{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  outline: black 2px solid;
 }
 .exercise-button{
   display: flex;
   align-content: center;
   justify-content: center;
+}
 
+.weekdays-description{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.weekdays-tip{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-weight: bold;
+  color:rgb(230, 40, 227) ;
+}
+.restday{
+  color:rgb(230, 40, 227) ;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.homepage-description{
+  padding-bottom: 2rem;
 }
