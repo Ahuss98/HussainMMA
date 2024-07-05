@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { API_KEY } from "/secret.js"; 
 
 function HomePage(){
-    const [selectedExercise1, setSelectedExercise1] = useState('');
-    const [exerciseData1, setExerciseData1] = useState(null);
-    const [shuffledExercises1, setShuffledExercises1] = useState([]);
-    const [visibleTextId, setVisibleTextId] = useState(null);
+  const [selectedExercise1, setSelectedExercise1] = useState('');
+  const [exerciseData1, setExerciseData1] = useState(null);
+  const [shuffledExercises1, setShuffledExercises1] = useState([]);
+  const [visibleTextId, setVisibleTextId] = useState(null);
+  
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   
     useEffect(() => {

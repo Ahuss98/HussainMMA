@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { API_KEY } from "/secret.js"; 
 
 function Wednesday() {
   const [selectedExercise1, setSelectedExercise1] = useState('');
@@ -10,6 +9,7 @@ function Wednesday() {
   const [shuffledExercises2, setShuffledExercises2] = useState([]);
   const [visibleTextId, setVisibleTextId] = useState(null);
   const [visibleTextId2, setVisibleTextId2] = useState(null);
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     if (selectedExercise1) {
