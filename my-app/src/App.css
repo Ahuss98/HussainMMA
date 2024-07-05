@@ -205,12 +205,81 @@ li{
   align-content: center;
   justify-content: center;
   font-weight: bold;
+  color:rgb(230, 40, 227) 
 }
 .footer {
   color: #fff;
   text-align: center;
   width: 100%;
   height: 3vw;
-  margin-top: 14rem; /* Push the footer to the bottom */
+  margin-top: 14rem;
 
+}
+
+.top-tip-tip{
+  display: flex;
+  align-content: center;
+}
+
+img{
+  max-width: 100px;
+}
+
+.contact-page {
+  padding: 20px;
+}
+
+.top-tip-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-tip-tip {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-tip-tip img {
+  max-width: 100px;
+  height: auto;
+}
+
+.contact-me-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(230, 40, 227);
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
 }
