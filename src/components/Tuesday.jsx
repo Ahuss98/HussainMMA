@@ -100,7 +100,7 @@ function Tuesday() {
         <option value="abdominals">Abdominals</option>
         <option value="abductors">Abductors</option>
         <option value="calves">Calves</option>
-        <option value="glutes">glutes</option>
+        <option value="glutes">Glutes</option>
         <option value="hamstrings">Hamstrings</option>
         <option value="quadriceps">Quadriceps</option>
       </select>
@@ -118,7 +118,7 @@ function Tuesday() {
         <option value="abdominals">Abdominals</option>
         <option value="abductors">Abductors</option>
         <option value="calves">Calves</option>
-        <option value="glutes">glutes</option>
+        <option value="glutes">Glutes</option>
         <option value="hamstrings">Hamstrings</option>
         <option value="quadriceps">Quadriceps</option>
       </select>
